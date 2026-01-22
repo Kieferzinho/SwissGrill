@@ -2,86 +2,71 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
-import { Picture } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Article from "~/components/Article.astro";
+import { Picture } from "astro:assets";
+import heroImage from "~/assets/images/recepcao.jpeg";
 
-// Images
-import PizzaHero from "~/assets/images/pizza-hero.png";
 ---
 
 <Layout>
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+				<Badge title="Restaurante Brasileiro" />
+				<h1 class="font-black">Refeições completas, sabor marcante e cuidado em cada preparo.</h1>
 
 				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
+					Na SwissGrill Marmitaria, acreditamos que boa comida começa com bons ingredientes e termina com satisfação à mesa. Nossos pratos são preparados com atenção, equilíbrio e muito sabor, trazendo uma experiência prática e acolhedora para quem valoriza qualidade no dia a dia.
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+				<span class="text-brand-green font-medium">✔ Também fazemos entrega</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
+					<Button url="/book">Reservar agora</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
 			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={PizzaHero}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-					loading={"eager"}
-					fetchpriority={"high"}
-				/>
+				   <Picture
+					   class:list={"mx-auto"}
+					   src={heroImage}
+					   width={800}
+					   height={600}
+					   formats={["avif", "webp"]}
+					   alt="Interior de restaurante italiano com clientes aproveitando a comida."
+					   loading={"eager"}
+					   fetchpriority={"high"}
+				   />
 			</div>
 		</Hero>
 	</Section>
 
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2>Welcome to AstroPie</h2>
+			<h2>Bem-vindo à SwissGrill Marmitaria</h2>
 			<p>
-				Nestled in the heart of the city, <strong>AstroPie</strong> offers an authentic Italian dining experience
-				like no other. From the moment you step through our doors, you'll be transported to the vibrant streets of
-				Italy, where good food and great company are at the center of life.
+				Estamos no coração da cidade, a poucos passos da praça principal. Nosso restaurante é o lugar perfeito para apreciar uma refeição deliciosa com amigos e família, em um ambiente acolhedor e descontraído.
 			</p>
 
-			<h3>Our Story</h3>
+			<h3>Nossa Essência</h3>
 			<p>
-				Founded in <em>1998</em>, our family-owned restaurant has always been a labor of love. Inspired by the
-				recipes passed down through generations, we bring the <u>rich culinary heritage</u> of Italy to your plate.
-				Every dish tells a story, and every meal is a celebration of flavor.
+				Aqui, tradição e sabor caminham juntos. Preparamos pratos brasileiros autênticos, com ingredientes frescos e selecionados, para garantir qualidade e satisfação em cada refeição.
 			</p>
 
-			<h3>Our Philosophy</h3>
-			<blockquote>"The secret ingredient is always love."</blockquote>
-			<p>
-				At AstroPie, we believe in the simple joy of fresh ingredients, time-honored techniques, and a
-				passion for creating memorable meals. From our hand-rolled pasta to our wood-fired pizzas, every bite is
-				crafted with care.
-			</p>
-
-			<h4>What Makes Us Special?</h4>
+			<h3>O que oferecemos</h3>
 			<ul>
-				<li><strong>Authenticity:</strong> Traditional recipes, just like Nonna used to make.</li>
-				<li><strong>Fresh Ingredients:</strong> Locally sourced produce and imported Italian staples.</li>
-				<li><strong>Warm Atmosphere:</strong> A place where everyone feels like family.</li>
+				<li><strong>Self Service:</strong> Variedade de pratos quentes, saladas frescas e opções de peixes.</li>
+				<li><strong>Churrasco:</strong> Cortes selecionados e temperos especiais, celebrando a tradição brasileira.</li>
+				<li><strong>Sobremesas:</strong> Doces clássicos e opções irresistíveis para finalizar sua refeição.</li>
+				<li><strong>Entrega e retirada:</strong> Praticidade para você aproveitar onde quiser.</li>
 			</ul>
 
-			<h3>Join Us</h3>
+			<h3>Venha nos visitar</h3>
 			<p>
-				Whether you're celebrating a special occasion or simply indulging in the pleasures of Italian cuisine, <strong
-					>AstroPie</strong
-				> is the perfect destination. <em>Come for the food, stay for the memories.</em>
+				Seja para celebrar uma ocasião especial ou simplesmente saborear uma boa comida, a SwissGrill Marmitaria é o destino ideal. Venha pela comida, fique pela experiência!
 			</p>
 		</Article>
 	</Section>

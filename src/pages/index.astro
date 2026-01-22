@@ -12,43 +12,56 @@ import WideImage from "~/components/WideImage.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
 
 // Images
-import PizzaHero from "~/assets/images/pizza-hero.png";
-import Pizza from "~/assets/images/pizza.png";
-import Spaghetti from "~/assets/images/spaghetti.png";
-import Fish from "~/assets/images/fish.png";
-import DecorativeImage from "~/assets/images/pexels-shvetsa-5953523.jpg";
+import logo from "~/assets/images/logoSwissGrill.jpeg";
+import localUm from "~/assets/images/localUm.jpeg";
+import localDois from "~/assets/images/localDois.jpeg";
+import localTres from "~/assets/images/localTres.jpeg";
+import localQuatro from "~/assets/images/localQuatro.jpeg";
+import localMesas from "~/assets/images/localMesas.jpeg";
+import recepcao from "~/assets/images/recepcao.jpeg";
+import recepcaoDois from "~/assets/images/recepcaoDois.jpeg";
+import prato from "~/assets/images/prato.jpeg";
+import churrasco from "~/assets/images/churrasco.jpeg";
+import feijoada from "~/assets/images/feijoada.jpeg";
+import self from "~/assets/images/self.jpeg";
+import selfDois from "~/assets/images/selfDois.jpeg";
+import selfService from "~/assets/images/selfService.jpeg";
+import selfServiceDois from "~/assets/images/selfServiceDois.jpeg";
+import selfServiceTres from "~/assets/images/selfServiceTres.jpeg";
+import selfServiceQuatro from "~/assets/images/selfServiceQuatro.jpeg";
 import reviewAuthors from "~/assets/images/review-authors.png";
-import Dessert from "~/assets/images/dessert.png";
-import Mussels from "~/assets/images/mussels2.png";
+import marmitaUm from "~/assets/images/marmitaUm.jpeg";
+import marmitaDois from "~/assets/images/marmitaDois.jpeg";
+import marmitaTres from "~/assets/images/marmitaTres.jpeg";
+import marmitaQuatro from "~/assets/images/marmitaQuatro.jpeg";
+import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 ---
 
-<Layout title="Home" pageTitle="Home" description="Welcome to our restaurant!">
+<Layout title="Início" pageTitle="Início" description="Bem-vindo ao nosso restaurante!">
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+				<Badge title="Restaurante Brasileiro" />
+				<h1 class="font-black">Refeições completas, sabor marcante e cuidado em cada preparo.</h1>
 
 				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
+					Na SwissGrill Marmitaria, acreditamos que boa comida começa com bons ingredientes e termina com satisfação à mesa. Nossos pratos são preparados com atenção, equilíbrio e muito sabor, trazendo uma experiência prática e acolhedora para quem valoriza qualidade no dia a dia.
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+				<span class="text-brand-green font-medium">✔ Também fazemos entrega</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
+					<Button url="/book">Reservar agora</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={PizzaHero}
+					src={logo}
 					height={600}
 					formats={["avif", "webp"]}
-					alt="A description of my image."
+					alt="Imagem de destaque"
 					loading={"eager"}
 					fetchpriority={"high"}
 				/>
@@ -56,13 +69,13 @@ import Mussels from "~/assets/images/mussels2.png";
 		</Hero>
 	</Section>
 
-	<WideImage image={DecorativeImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
+	<WideImage image={feijoada} alt="Imagem decorativa" class:list={"aspect-video lg:aspect-[16/6]"} />
 
 	<Section class:list={"bg-white"}>
 		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">Our dishes</h2>
+			<h2 slot="heading-title" class="font-black text-brand-green h2">Self Service</h2>
 			<p slot="heading-content">
-				Explore our selection of authentic Italian dishes, from classic pizzas to homemade pastas.
+				Explore nossa seleção de pratos brasileiros autênticos, de pratos tradicionais a opções contemporâneas.
 			</p>
 		</Heading>
 
@@ -71,14 +84,13 @@ import Mussels from "~/assets/images/mussels2.png";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto"}
-						src={Pizza}
+						src={self}
 						formats={["avif", "webp"]}
-						alt="A description of my image."
+						alt="Prato servido"
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Pratos Quentes</h3>
 					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
+						No nosso self service você encontra uma variedade de pratos quentes, como carnes assadas, massas, arroz, feijão e acompanhamentos fresquinhos todos os dias.
 					</p>
 				</div>
 			</div>
@@ -87,14 +99,13 @@ import Mussels from "~/assets/images/mussels2.png";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto"}
-						src={Spaghetti}
+						src={selfDois}
 						formats={["avif", "webp"]}
-						alt="A description of my image."
+						alt="Espaguete servido"
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Saladas Frescas</h3>
 					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
+						Monte seu prato com uma seleção de saladas frescas, legumes cozidos e opções leves, ideais para quem busca uma refeição equilibrada e saborosa.
 					</p>
 				</div>
 			</div>
@@ -103,89 +114,83 @@ import Mussels from "~/assets/images/mussels2.png";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto"}
-						src={Fish}
+						src={selfService}
 						formats={["avif", "webp"]}
-						alt="A description of my image."
+						alt="Prato de peixe"
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Opções de Peixes</h3>
 					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
+						Aproveite também nossas opções de peixes e frutos do mar, preparados com temperos especiais, trazendo variedade ao seu almoço self service.
 					</p>
 				</div>
 			</div>
 		</Grid>
-	</Section>
 
 	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose lg:order-2">
-				<h1 class="font-black">Pizza</h1>
+		   <Hero>
+			   <div slot="hero-content-left" class="prose lg:order-2">
+				   <h1 class="font-black">Churrasco</h1>
 
-				<p>
-					Pizza is a beloved dish that originated in Italy and has since become a global sensation. Its
-					versatility allows for endless combinations of toppings, from classic margherita with fresh
-					tomatoes, mozzarella, and basil, to more adventurous options like barbecue chicken or vegan cheese.
-				</p>
+				   <p>
+					   O churrasco é uma tradição brasileira que reúne amigos e família ao redor do fogo e de sabores marcantes. 
+					   Cortes selecionados, temperos especiais e o aroma irresistível da brasa fazem parte dessa experiência única.
+				   </p>
 
-				<p>
-					Whether enjoyed at a cozy pizzeria or delivered to your doorstep, pizza brings people together and
-					satisfies cravings like no other food. Beyond its delicious taste, pizza also holds cultural
-					significance. It is often associated with gatherings, celebrations, and comfort.
-				</p>
+				   <p>
+					   Seja em uma grande confraternização ou em um almoço de domingo, o churrasco aproxima as pessoas 
+					   e celebra a alegria de compartilhar bons momentos e boa comida.
+				   </p>
 
-				<div class="mt-8">
-					<Button url="/menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="size-5 inline-block"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-								clip-rule="evenodd"></path>
-						</svg>
-						View menu
-					</Button>
-				</div>
-			</div>
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={PizzaHero}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
+				   <div class="mt-8">
+					   <Button url="/menu">
+						   <svg
+							   xmlns="http://www.w3.org/2000/svg"
+							   viewBox="0 0 20 20"
+							   fill="currentColor"
+							   class="size-5 inline-block"
+							   aria-hidden="true"
+						   >
+							   <path
+								   fill-rule="evenodd"
+								   d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+								   clip-rule="evenodd"></path>
+						   </svg>
+						   Ver cardápio
+					   </Button>
+				   </div>
+			   </div>
+			   <div slot="hero-content-right">
+				   <Picture
+					   class:list={"mx-auto"}
+					   src={churrasco}
+					   height={600}
+					   formats={["avif", "webp"]}
+					   alt="Imagem de churrasco"
+				   />
+			   </div>
+		   </Hero>
 	</Section>
 
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge color="red" title="delicious" />
-				<h2 class="font-black h2 !my-4">Plate of the week</h2>
+				<h2 class="font-black h2 !my-4">Prato da semana</h2>
 
-				<span class="text-brand-red text-2xl font-bold italic">Fresh Mussels!</span>
+				<span class="text-brand-red text-2xl font-bold italic">Feijoada!</span>
 
 				<p>
-					Our plate of the week is a delicious dish that changes every week. This week, we're featuring fresh
-					mussels cooked in a white wine and garlic sauce, served with a side of crispy fries. Don't miss out
-					on this limited-time offer!
+					Nosso prato da semana é uma delícia que muda toda semana. Desta vez, trazemos a feijoada, um clássico da culinária brasileira preparada com carne de porco macia, feijão preto cremoso e acompanhamentos tradicionais. Não perca essa oferta por tempo limitado!
 				</p>
 
 				<div class="mt-8">
-					<Button color="red" url="/book">Book now</Button>
+					<Button color="red" url="/book">Reservar agora</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={Mussels}
+					src={feijoada}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -202,11 +207,11 @@ import Mussels from "~/assets/images/mussels2.png";
 					<div class="text-center not-prose">
 						<Badge color="white" title="reviews" />
 					</div>
-					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">What our customers say...</h2>
+					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">O que nossos clientes dizem...</h2>
 					<div slot="heading-content">
 						<p class="text-center">
-							Don't just take our word for it. Read what our customers have to say about their dining
-							experience at our restaurant.
+							Não acredite só na nossa palavra. Veja o que nossos clientes dizem sobre a experiência
+							gastronômica em nosso restaurante.
 						</p>
 
 						<ReviewSlider />
@@ -214,7 +219,7 @@ import Mussels from "~/assets/images/mussels2.png";
 				</div>
 
 				<div slot="hero-content-right">
-					<Picture src={reviewAuthors} alt="Review authors" class="w-full h-auto" />
+					<Picture src={reviewAuthors} alt="Autores das avaliações" class="w-full h-auto" />
 				</div>
 			</Hero>
 		</div>
@@ -248,21 +253,21 @@ import Mussels from "~/assets/images/mussels2.png";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none order-2">
 				<Badge title="dolce" />
-				<h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">Desserts</h2>
+				<h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">Sobremesas</h2>
 				<div slot="heading-content">
 					<p>
-						Indulge in our selection of sweet treats, from classic tiramisu to decadent chocolate cake. Our
-						desserts are the perfect way to end your meal on a high note.
+						Delicie-se com nossa seleção de doces, do clássico tiramisù ao bolo de chocolate mais 
+						decadente. Nossas sobremesas são a maneira perfeita de encerrar sua refeição.
 					</p>
 
 					<p>
-						Experience the taste of Italy with our authentic dishes made from the finest ingredients.
-						Indulge in our wide variety of pizzas, pastas, and desserts, all crafted with love and
-						tradition. Whether you're dining in or taking out, we promise a memorable culinary experience.
+						Experimente o sabor da Itália com nossos pratos autênticos feitos com os melhores ingredientes.
+						Aproveite nossa variedade de pizzas, massas e sobremesas, todas preparadas com amor e tradição.
+						No salão ou para viagem, prometemos uma experiência memorável.
 					</p>
 
 					<div class="mt-8">
-						<Button url="/menu">See our menu</Button>
+						<Button url="/menu">Veja nosso cardápio</Button>
 					</div>
 				</div>
 			</div>
@@ -270,10 +275,10 @@ import Mussels from "~/assets/images/mussels2.png";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={Dessert}
+					src={prato}
 					height={600}
 					formats={["avif", "webp"]}
-					alt="A description of my image."
+					alt="Imagem de sobremesa"
 				/>
 			</div>
 		</Hero>
@@ -284,19 +289,19 @@ import Mussels from "~/assets/images/mussels2.png";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none">
 				<Badge color="red" title="benvenuto" />
-				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">Drop by and say hello</h2>
+				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">Venha nos visitar</h2>
 				<div slot="heading-content">
 					<p>
-						We're located in the heart of the city, just a stone's throw away from the main square. Our
-						restaurant is the perfect place to enjoy a delicious meal with friends and family.
+						Estamos no coração da cidade, a poucos passos da praça principal. 
+						Nosso restaurante é o lugar perfeito para apreciar uma refeição deliciosa com amigos e família.
 					</p>
 
 					<span class="text-brand-red font-medium">
-						✔ We also do take-away, so you can enjoy your food at home
+						✔ Também fazemos retirada (take-away), para você aproveitar em casa
 					</span>
 
 					<div class="mt-8">
-						<Button color="red" url="/book">Book a table</Button>
+						<Button color="red" url="/book">Reservar uma mesa</Button>
 					</div>
 				</div>
 			</div>
@@ -304,10 +309,10 @@ import Mussels from "~/assets/images/mussels2.png";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={Dessert}
+					src={prato}
 					height={600}
 					formats={["avif", "webp"]}
-					alt="A description of my image."
+					alt="Imagem ilustrativa"
 				/>
 			</div>
 		</Hero>

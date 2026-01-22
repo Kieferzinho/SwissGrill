@@ -1,56 +1,56 @@
 [
 	{
 		"id": 1,
-		"title": "pexels-adrienn",
-		"image": "/src/assets/images/gallery/pexels-adrienn-638530-1537635.jpg",
-		"alt": "pexels-adrienn-638530-1537635"
+		"title": "local-um",
+		"image": "/src/assets/images/localUm.jpeg",
+		"alt": "Interior photo local um"
 	},
 	{
 		"id": 2,
-		"title": "pexels-annija-mieze",
-		"image": "/src/assets/images/gallery/pexels-annija-mieze-427042079-15197931.jpg",
-		"alt": "pexels-annija-mieze-427042079-15197931"
+		"title": "local-dois",
+		"image": "/src/assets/images/localDois.jpeg",
+		"alt": "Interior photo local dois"
 	},
 	{
 		"id": 3,
-		"title": "pexels-enginakyurt",
-		"image": "/src/assets/images/gallery/pexels-enginakyurt-1487511.jpg",
-		"alt": "pexels-enginakyurt-1487511"
+		"title": "local-tres",
+		"image": "/src/assets/images/localTres.jpeg",
+		"alt": "Interior photo local tres"
 	},
 	{
 		"id": 4,
-		"title": "pexels-fariphotography",
-		"image": "/src/assets/images/gallery/pexels-fariphotography-905847.jpg",
-		"alt": "pexels-fariphotography-905847"
+		"title": "local-quatro",
+		"image": "/src/assets/images/localQuatro.jpeg",
+		"alt": "Interior photo local quatro"
 	},
 	{
 		"id": 5,
-		"title": "pexels-narda-yescas",
-		"image": "/src/assets/images/gallery/pexels-narda-yescas-724842-1566837.jpg",
-		"alt": "pexels-narda-yescas-724842-1566837"
+		"title": "local-mesas",
+		"image": "/src/assets/images/localMesas.jpeg",
+		"alt": "Dining tables"
 	},
 	{
 		"id": 6,
-		"title": "pexels-pixabay",
-		"image": "/src/assets/images/gallery/pexels-pixabay-262978.jpg",
-		"alt": "pexels-pixabay-262978"
+		"title": "recepcao",
+		"image": "/src/assets/images/recepcao.jpeg",
+		"alt": "Reception area"
 	},
 	{
 		"id": 7,
-		"title": "pexels-rachel-claire",
-		"image": "/src/assets/images/gallery/pexels-rachel-claire-5531424.jpg",
-		"alt": "pexels-rachel-claire-5531424"
+		"title": "recepcao-dois",
+		"image": "/src/assets/images/recepcaoDois.jpeg",
+		"alt": "Reception area two"
 	},
 	{
 		"id": 8,
-		"title": "pexels-vlah",
-		"image": "/src/assets/images/gallery/pexels-vlah-3084550.jpg",
-		"alt": "pexels-vlah-3084550"
+		"title": "churrasco",
+		"image": "/src/assets/images/churrasco.jpeg",
+		"alt": "Churrasco dish"
 	},
 	{
 		"id": 9,
-		"title": "pexels-wildlittlethingsphoto",
-		"image": "/src/assets/images/gallery/pexels-wildlittlethingsphoto-696218.jpg",
-		"alt": "pexels-wildlittlethingsphoto-696218"
+		"title": "feijoada",
+		"image": "/src/assets/images/feijoada.jpeg",
+		"alt": "Feijoada dish"
 	}
 ]
