@@ -4,18 +4,18 @@ const currentYear = new Date().getFullYear();
 import { siteName } from "~/data/config";
 ---
 
-<footer class="bg-brand-green text-white">
+<footer class="bg-gray-dark text-white">
 	<div class="container pt-16 pb-8">
-		<p class="text-center font-bold text-4xl text-white">Swiss Grill<span class="text-brand-red bg-white px-3 ml-1 rounded-lg">Pie</span></p>
+		<p class="text-center font-bold text-4xl text-yellow-gold">Swiss Grill</p>
 		<nav class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-6" aria-label="Footer">
 			{
 				menuMain.map((item) => (
-					<a href={item.url} class="hover:underline">
+					<a href={item.url} class="hover:underline hover:text-yellow-bright transition">
 						{item.name}
 					</a>
 				))
 			}
 		</nav>
-		<p class="mt-10 text-center text-sm">&copy; {currentYear} {siteName}. Todos os direitos reservados. <a class="underline" href="/privacy-policy">Privacy policy</a></p>
+		<p class="mt-10 text-center text-sm">&copy; {currentYear} {siteName}. Todos os direitos reservados. <a class="underline hover:text-yellow-bright transition" href="/privacy-policy">Privacy policy</a></p>
 	</div>
 </footer>

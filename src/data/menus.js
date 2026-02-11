@@ -1,31 +1,31 @@
 export const menuMain = [
     {
-        name: "Home",
+        name: "Início",
         url: "/",
         highlighted: false,
     },
     {
-        name: "Menu",
+        name: "Cardápio",
         url: "/menu",
         highlighted: false,
     },
     {
-        name: "About Us",
+        name: "Sobre Nós",
         url: "/about-us",
         highlighted: false,
     },
     {
-        name: "Gallery",
+        name: "Galeria",
         url: "/gallery",
         highlighted: false,
     },
     {
-        name: "Contact",
+        name: "Contato",
         url: "/contact",
         highlighted: false,
     },
     {
-        name: "Book",
+        name: "Reservar",
         url: "/book",
         highlighted: true,
     },
@@ -33,18 +33,18 @@ export const menuMain = [
 
 export const footerPrimary = [
     {
-        title: "Navigatie",
+        title: "Navegação",
         items: [
-            { name: "home", url: "/" },
+            { name: "início", url: "/" },
         ],
     },
 ];
 
 export const footerSecondary = [
     {
-        title: "support",
+        title: "suporte",
         items: [
-            { name: "pricing", url: "/pricing" },
+            { name: "preços", url: "/pricing" },
         ],
     },
 ];
@@ -53,8 +53,8 @@ export const footerTertiary = [
     {
         title: "Links",
         items: [
-            { name: "privacybeleid", url: '/privacy-policy' },
-            { name: "api status", url: "/api-status" },
+            { name: "política de privacidade", url: '/privacy-policy' },
+            { name: "status da api", url: "/api-status" },
         ],
     },
 ];

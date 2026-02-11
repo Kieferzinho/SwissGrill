@@ -1,27 +1,52 @@
 [
 	{
 		"id": 1,
-		"author": "Jane Doe",
-		"review": "The food was amazing! I loved the atmosphere and the service was great."
+		"author": "Maria Silva",
+		"review": "A carne estava suculenta e macia! Adorei o ambiente aconchegante e o atendimento foi excelente."
 	},
 	{
 		"id": 2,
-		"author": "John Smith",
-		"review": "The best Italian food I've ever had. I can't wait to come back!"
+		"author": "Carlos Santos",
+		"review": "O melhor churrasco que já comi. Mal posso esperar para voltar!"
 	},
 	{
 		"id": 3,
-		"author": "Alice Johnson",
-		"review": "The pasta was perfectly cooked and the sauce was delicious. I highly recommend this restaurant."
+		"author": "Ana Ferreira",
+		"review": "Os espetos estavam perfeitamente assados e o tempero era delicioso. Recomendo fortemente esta churrascaria."
 	},
 	{
 		"id": 4,
-		"author": "Bob Brown",
-		"review": "The pizza was fantastic! I will definitely be ordering from here again."
+		"author": "Bruno Oliveira",
+		"review": "As marmitas são fantásticas! Definitivamente farei pedidos aqui novamente."
 	},
 	{
 		"id": 5,
-		"author": "Sarah Wilson",
-		"review": "The tiramisu was to die for. I will be dreaming about it for weeks."
+		"author": "Juliana Martins",
+		"review": "A sobremesa era de morrer. Vou ficar sonhando com ela por semanas."
+	},
+	{
+		"id": 6,
+		"author": "Joana Silva",
+		"review": "A carne era incrível! Adorei a atmosfera e o atendimento foi excelente."
+	},
+	{
+		"id": 7,
+		"author": "João Santos",
+		"review": "O melhor churrasco que já comi. Mal posso esperar para voltar!"
+	},
+	{
+		"id": 8,
+		"author": "Alicia Rocha",
+		"review": "Os espetos estavam perfeitamente assados e o tempero era delicioso. Recomendo fortemente esta churrascaria."
+	},
+	{
+		"id": 9,
+		"author": "Roberto Oliveira",
+		"review": "As marmitas são fantásticas! Definitivamente farei pedidos aqui novamente."
+	},
+	{
+		"id": 10,
+		"author": "Sara Costa",
+		"review": "O sobremesa era de morrer. Vou ficar sonhando com ela por semanas."
 	}
 ]

@@ -9,10 +9,10 @@ const gallery = await getCollection("gallery");
 ---
 
 <Layout>
-	<Section class:list={"[&>.container]:pb-0"}>
+	<Section class:list={"[&>.container]:pb-0 bg-gray-dark"}>
 		<Heading>
-			<h1 slot="heading-title" class="font-black text-brand-green h2">Galeria</h1>
-			<p slot="heading-content">
+			<h1 slot="heading-title" class="font-black text-yellow-gold h2">Galeria</h1>
+			<p slot="heading-content" class="text-gray-light">
 				Conheça nosso restaurante e nossos pratos na galeria. Prometemos uma experiência culinária inesquecível.
 			</p>
 		</Heading>
@@ -20,12 +20,12 @@ const gallery = await getCollection("gallery");
 	<div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
 		{
 			gallery.map((item, index) => (
-				<div class="masonry-grid-item">
+				<div class="masonry-grid-item overflow-hidden rounded-lg border-2 border-yellow-gold/20 hover:border-yellow-gold transition">
 					<a href={item.data.image.src} class="glightbox">
 						<Picture
 							src={item.data.image}
 							alt={item.data.alt}
-							class="h-full w-full object-cover object-center"
+							class="h-full w-full object-cover object-center hover:scale-105 transition duration-300"
 							loading={index < 3 ? "eager" : "lazy"}
                             fetchpriority={index < 3 ? "high" : "auto"}
 						/>

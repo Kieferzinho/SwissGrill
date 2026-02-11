@@ -38,20 +38,20 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 ---
 
 <Layout title="Início" pageTitle="Início" description="Bem-vindo ao nosso restaurante!">
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="Restaurante Brasileiro" />
+				<Badge color="yellow-gold" title="Restaurante Brasileiro" />
 				<h1 class="font-black">Refeições completas, sabor marcante e cuidado em cada preparo.</h1>
 
 				<p>
 					Na SwissGrill Marmitaria, acreditamos que boa comida começa com bons ingredientes e termina com satisfação à mesa. Nossos pratos são preparados com atenção, equilíbrio e muito sabor, trazendo uma experiência prática e acolhedora para quem valoriza qualidade no dia a dia.
 				</p>
 
-				<span class="text-brand-green font-medium">✔ Também fazemos entrega</span>
+				<span class="text-yellow-gold font-medium">✔ Também fazemos entrega</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Reservar agora</Button>
+					<Button color="yellow-gold" url="/book">Reservar agora</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
@@ -71,72 +71,72 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 
 	<WideImage image={feijoada} alt="Imagem decorativa" class:list={"aspect-video lg:aspect-[16/6]"} />
 
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">Self Service</h2>
-			<p slot="heading-content">
+			<h2 slot="heading-title" class="font-black text-yellow-gold h2">Self Service</h2>
+			<p slot="heading-content" class="text-gray-light">
 				Explore nossa seleção de pratos brasileiros autênticos, de pratos tradicionais a opções contemporâneas.
 			</p>
 		</Heading>
 
 		<Grid>
 			<div slot="grid-content-1">
-				<div class="flex flex-col items-center prose text-center">
+				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
-						class:list={"not-prose w-full h-auto"}
+						class:list={"not-prose w-full h-auto rounded-lg"}
 						src={self}
 						formats={["avif", "webp"]}
 						alt="Prato servido"
 					/>
-					<h3 class="h4 mt-0 font-black">Pratos Quentes</h3>
-					<p>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Pratos Quentes</h3>
+					<p class="text-gray-light">
 						No nosso self service você encontra uma variedade de pratos quentes, como carnes assadas, massas, arroz, feijão e acompanhamentos fresquinhos todos os dias.
 					</p>
 				</div>
 			</div>
 
 			<div slot="grid-content-2">
-				<div class="flex flex-col items-center prose text-center">
+				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
-						class:list={"not-prose w-full h-auto"}
+						class:list={"not-prose w-full h-auto rounded-lg"}
 						src={selfDois}
 						formats={["avif", "webp"]}
 						alt="Espaguete servido"
 					/>
-					<h3 class="h4 mt-0 font-black">Saladas Frescas</h3>
-					<p>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Saladas Frescas</h3>
+					<p class="text-gray-light">
 						Monte seu prato com uma seleção de saladas frescas, legumes cozidos e opções leves, ideais para quem busca uma refeição equilibrada e saborosa.
 					</p>
 				</div>
 			</div>
 
 			<div slot="grid-content-3">
-				<div class="flex flex-col items-center prose text-center">
+				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
-						class:list={"not-prose w-full h-auto"}
+						class:list={"not-prose w-full h-auto rounded-lg"}
 						src={selfService}
 						formats={["avif", "webp"]}
 						alt="Prato de peixe"
 					/>
-					<h3 class="h4 mt-0 font-black">Opções de Peixes</h3>
-					<p>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Opções de Peixes</h3>
+					<p class="text-gray-light">
 						Aproveite também nossas opções de peixes e frutos do mar, preparados com temperos especiais, trazendo variedade ao seu almoço self service.
 					</p>
 				</div>
 			</div>
 		</Grid>
 
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		   <Hero>
 			   <div slot="hero-content-left" class="prose lg:order-2">
-				   <h1 class="font-black">Churrasco</h1>
+				   <h1 class="font-black text-yellow-gold">Churrasco</h1>
 
-				   <p>
+				   <p class="text-gray-light">
 					   O churrasco é uma tradição brasileira que reúne amigos e família ao redor do fogo e de sabores marcantes. 
 					   Cortes selecionados, temperos especiais e o aroma irresistível da brasa fazem parte dessa experiência única.
 				   </p>
 
-				   <p>
+				   <p class="text-gray-light">
 					   Seja em uma grande confraternização ou em um almoço de domingo, o churrasco aproxima as pessoas 
 					   e celebra a alegria de compartilhar bons momentos e boa comida.
 				   </p>
@@ -171,20 +171,20 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 		   </Hero>
 	</Section>
 
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="delicious" />
-				<h2 class="font-black h2 !my-4">Prato da semana</h2>
+				<Badge color="yellow" title="delicious" />
+				<h2 class="font-black h2 !my-4 text-yellow-gold">Prato da semana</h2>
 
-				<span class="text-brand-red text-2xl font-bold italic">Feijoada!</span>
+				<span class="text-yellow-bright text-2xl font-bold italic">Feijoada!</span>
 
-				<p>
+				<p class="text-gray-light">
 					Nosso prato da semana é uma delícia que muda toda semana. Desta vez, trazemos a feijoada, um clássico da culinária brasileira preparada com carne de porco macia, feijão preto cremoso e acompanhamentos tradicionais. Não perca essa oferta por tempo limitado!
 				</p>
 
 				<div class="mt-8">
-					<Button color="red" url="/book">Reservar agora</Button>
+					<Button color="yellow-bright" url="/book">Reservar agora</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
@@ -200,16 +200,16 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 	</Section>
 
 	<!-- Reviews -->
-	<Section class:list={"bg-brand-red/20 relative"}>
+	<Section class:list={"bg-gray-dark relative"}>
 		<div class="py-16">
 			<Hero>
 				<div slot="hero-content-left" class="prose max-w-none order-2">
 					<div class="text-center not-prose">
-						<Badge color="white" title="reviews" />
+						<Badge color="yellow-gold" title="reviews" />
 					</div>
-					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">O que nossos clientes dizem...</h2>
+					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4 text-yellow-gold">O que nossos clientes dizem...</h2>
 					<div slot="heading-content">
-						<p class="text-center">
+						<p class="text-center text-gray-light">
 							Não acredite só na nossa palavra. Veja o que nossos clientes dizem sobre a experiência
 							gastronômica em nosso restaurante.
 						</p>
@@ -249,25 +249,25 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 	</Section>
 
 	<!-- Desserts -->
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none order-2">
-				<Badge title="dolce" />
-				<h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">Sobremesas</h2>
+				<Badge color="yellow-gold" title="dolce" />
+				<h2 slot="heading-title" class="font-black text-yellow-gold h2 !my-4">Sobremesas</h2>
 				<div slot="heading-content">
-					<p>
+					<p class="text-gray-light">
 						Delicie-se com nossa seleção de doces, do clássico tiramisù ao bolo de chocolate mais 
 						decadente. Nossas sobremesas são a maneira perfeita de encerrar sua refeição.
 					</p>
 
-					<p>
+					<p class="text-gray-light">
 						Experimente o sabor da Itália com nossos pratos autênticos feitos com os melhores ingredientes.
 						Aproveite nossa variedade de pizzas, massas e sobremesas, todas preparadas com amor e tradição.
 						No salão ou para viagem, prometemos uma experiência memorável.
 					</p>
 
 					<div class="mt-8">
-						<Button url="/menu">Veja nosso cardápio</Button>
+						<Button color="yellow-gold" url="/menu">Veja nosso cardápio</Button>
 					</div>
 				</div>
 			</div>
@@ -285,23 +285,23 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 	</Section>
 
 	<!-- Contact -->
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none">
-				<Badge color="red" title="benvenuto" />
-				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">Venha nos visitar</h2>
+				<Badge color="yellow" title="benvenuto" />
+				<h2 slot="heading-title" class="font-black text-yellow-bright h2 !my-4">Venha nos visitar</h2>
 				<div slot="heading-content">
-					<p>
+					<p class="text-gray-light">
 						Estamos no coração da cidade, a poucos passos da praça principal. 
 						Nosso restaurante é o lugar perfeito para apreciar uma refeição deliciosa com amigos e família.
 					</p>
 
-					<span class="text-brand-red font-medium">
+					<span class="text-yellow-gold font-medium">
 						✔ Também fazemos retirada (take-away), para você aproveitar em casa
 					</span>
 
 					<div class="mt-8">
-						<Button color="red" url="/book">Reservar uma mesa</Button>
+						<Button color="yellow-bright" url="/book">Reservar uma mesa</Button>
 					</div>
 				</div>
 			</div>
