@@ -2,51 +2,51 @@
 	{
 		"id": 1,
 		"author": "Maria Silva",
-		"review": "A carne estava suculenta e macia! Adorei o ambiente aconchegante e o atendimento foi excelente."
+		"review": "O burger estava suculento e no ponto certo. Ambiente acolhedor e atendimento impecavel."
 	},
 	{
 		"id": 2,
 		"author": "Carlos Santos",
-		"review": "O melhor churrasco que já comi. Mal posso esperar para voltar!"
+		"review": "Um dos melhores hamburgueres que ja provei em Sao Paulo. Com certeza volto em breve."
 	},
 	{
 		"id": 3,
 		"author": "Ana Ferreira",
-		"review": "Os espetos estavam perfeitamente assados e o tempero era delicioso. Recomendo fortemente esta churrascaria."
+		"review": "Pao fresquinho, carne saborosa e molho da casa maravilhoso. Recomendo demais a hamburgueria."
 	},
 	{
 		"id": 4,
 		"author": "Bruno Oliveira",
-		"review": "As marmitas são fantásticas! Definitivamente farei pedidos aqui novamente."
+		"review": "Pedi delivery e chegou tudo certinho: burger quente, batata crocante e embalagem caprichada."
 	},
 	{
 		"id": 5,
 		"author": "Juliana Martins",
-		"review": "A sobremesa era de morrer. Vou ficar sonhando com ela por semanas."
+		"review": "A sobremesa e o milk-shake fecharam o pedido com chave de ouro. Experiencia completa."
 	},
 	{
 		"id": 6,
 		"author": "Joana Silva",
-		"review": "A carne era incrível! Adorei a atmosfera e o atendimento foi excelente."
+		"review": "Adorei o smash burger, muito saboroso e com borda crocante. Atendimento super atencioso."
 	},
 	{
 		"id": 7,
 		"author": "João Santos",
-		"review": "O melhor churrasco que já comi. Mal posso esperar para voltar!"
+		"review": "Excelente custo-beneficio nos combos. Lanche caprichado e porcao generosa de batata."
 	},
 	{
 		"id": 8,
 		"author": "Alicia Rocha",
-		"review": "Os espetos estavam perfeitamente assados e o tempero era delicioso. Recomendo fortemente esta churrascaria."
+		"review": "Ambiente animado, burger muito bem montado e ingredientes de qualidade. Virei cliente."
 	},
 	{
 		"id": 9,
 		"author": "Roberto Oliveira",
-		"review": "As marmitas são fantásticas! Definitivamente farei pedidos aqui novamente."
+		"review": "A batata com cheddar e bacon e sensacional. Vale cada centavo."
 	},
 	{
 		"id": 10,
 		"author": "Sara Costa",
-		"review": "O sobremesa era de morrer. Vou ficar sonhando com ela por semanas."
+		"review": "Atendimento rapido, hamburguer saboroso e sobremesa deliciosa. Lugar certo para voltar sempre."
 	}
 ]

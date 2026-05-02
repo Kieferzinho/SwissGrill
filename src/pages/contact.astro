@@ -1,18 +1,73 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
-import Heading from "~/components/Heading.astro";
-import FormContact from "~/components/forms/FormContact.astro";
+import { Picture } from "astro:assets";
+
+import whatsappLogo from "~/assets/images/whatsapp-logo-png.png";
 ---
 
-<Layout>
+<Layout title="Contato" pageTitle="Contato" description="Fale com a Swiss Grill pelo WhatsApp.">
 	<Section class:list={"bg-gray-dark"}>
-		<Heading>
-			<h2 slot="heading-title" class="font-black text-yellow-gold h2">Contato</h2>
-			<p slot="heading-content" class="text-gray-light">Fale conosco para qualquer dúvida ou solicitação.</p>
-		</Heading>
+		<div class="mb-16 rounded-[2rem] border border-white/10 bg-black/35 px-6 py-10 shadow-2xl backdrop-blur-sm lg:px-12 lg:py-14">
+			<div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+				<span class="inline-flex items-center rounded-full border border-yellow-gold/20 bg-yellow-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-yellow-bright">
+					WhatsApp
+				</span>
+				<div class="space-y-5">
+					<p class="text-pretty text-gray-light lg:text-lg">Se precisar de ajuda com pedido, visita ou qualquer detalhe do cardápio, fale direto com a gente pelo WhatsApp.</p>
+				</div>
+				<div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-yellow-bright/90">
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Atendimento</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Pedidos</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Dúvidas</span>
+				</div>
+			</div>
+		</div>
 
-        <FormContact />
+		<div class="mx-auto mb-16 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		</div>
+
+		<div class="grid gap-8 lg:grid-cols-1">
+			<a
+				href="#"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="group flex h-full flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-black/35 p-8 text-gray-light shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:border-yellow-gold/50 hover:shadow-2xl lg:max-w-4xl lg:mx-auto"
+				aria-label="Falar no WhatsApp"
+			>
+				<div class="flex items-center justify-between gap-6">
+					<div class="space-y-4">
+						<p class="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-bright">WhatsApp</p>
+						<h2 class="h3 font-black text-white">Falar agora</h2>
+					</div>
+					<div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-inner">
+						<Picture
+							src={whatsappLogo}
+							alt="WhatsApp logo"
+							class="h-16 w-32 object-contain sm:h-20 sm:w-40"
+							formats={[]}
+						/>
+					</div>
+				</div>
+
+				<p class="max-w-md text-pretty text-gray-light/90">
+					Use esta rota para centralizar o atendimento e evitar fluxo de e-mail por enquanto. O link do WhatsApp pode ser preenchido depois.
+				</p>
+
+				<span class="inline-flex w-fit items-center gap-2 rounded-full border border-yellow-gold/30 bg-yellow-gold/10 px-5 py-3 text-sm font-semibold text-yellow-gold transition group-hover:border-yellow-gold/60 group-hover:bg-yellow-gold/15">
+					Abrir conversa
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" aria-hidden="true">
+						<path
+							fill-rule="evenodd"
+							d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</span>
+			</a>
+		</div>
 		
 	</Section>
 </Layout>

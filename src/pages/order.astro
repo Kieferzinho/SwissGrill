@@ -1,0 +1,78 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Heading from "~/components/Heading.astro";
+import { Picture } from "astro:assets";
+
+import ifoodLogo from "~/assets/images/ifood-logo-0.png";
+import food99Logo from "~/assets/images/99-food-logo-1.png";
+
+const deliveryPlatforms = [
+	{
+		name: "iFood",
+		description: "Escolha seus burgers favoritos e finalize o pedido no iFood com poucos cliques.",
+		logo: ifoodLogo,
+		href: "#",
+		cta: "Pedir no iFood",
+	},
+	{
+		name: "99Food",
+		description: "Faça seu pedido pela 99Food e receba a experiência Swiss Grill onde estiver.",
+		logo: food99Logo,
+		href: "#",
+		cta: "Pedir na 99Food",
+	},
+];
+---
+
+<Layout title="Pedir online" pageTitle="Pedir online" description="Peça os burgers da Swiss Grill pelo iFood ou 99Food.">
+	<Section class:list={"bg-gray-dark"}>
+		<Heading>
+			<h2 slot="heading-title" class="font-black text-yellow-gold h2">Pedir online</h2>
+			<p slot="heading-content" class="text-pretty text-gray-light">
+				Escolha seu app favorito e finalize o pedido no canal que for mais prático para você. Os links serão atualizados assim que você nos enviar as URLs finais.
+			</p>
+		</Heading>
+
+		<div class="grid gap-8 lg:grid-cols-2">
+			{
+				deliveryPlatforms.map((platform) => (
+					<a
+						href={platform.href}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group flex h-full flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-black/35 p-8 text-gray-light shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:border-yellow-gold/50 hover:shadow-2xl"
+						aria-label={platform.cta}
+					>
+						<div class="flex items-center justify-between gap-6">
+							<div class="space-y-4">
+								<p class="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-bright">{platform.name}</p>
+								<h3 class="h3 font-black text-white">Pedir agora</h3>
+							</div>
+							<div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-inner">
+								<Picture
+									src={platform.logo}
+									alt={`${platform.name} logo`}
+									class="h-16 w-32 object-contain sm:h-20 sm:w-40"
+									formats={["avif", "webp"]}
+								/>
+							</div>
+						</div>
+
+						<p class="max-w-md text-pretty text-gray-light/90">{platform.description}</p>
+
+						<span class="inline-flex w-fit items-center gap-2 rounded-full border border-yellow-gold/30 bg-yellow-gold/10 px-5 py-3 text-sm font-semibold text-yellow-gold transition group-hover:border-yellow-gold/60 group-hover:bg-yellow-gold/15">
+							{platform.cta}
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" aria-hidden="true">
+								<path
+									fill-rule="evenodd"
+									d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+									clip-rule="evenodd"></path>
+							</svg>
+						</span>
+					</a>
+				))
+			}
+		</div>
+	</Section>
+</Layout>

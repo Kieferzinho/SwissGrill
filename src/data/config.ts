@@ -3,8 +3,8 @@ export const siteLang = "pt-BR";
 export const siteCurrency = "BRL";
 export const siteDomain = "swissgrill.com.br";
 export const siteName = "Swiss Grill";
-export const siteSlogan = "A melhor experiência em carnes!";
-export const themeColor = "#8B0000";
+export const siteSlogan = "Hamburgueres artesanais com muito sabor!";
+export const themeColor = "#0B0B0C";
 
 export const phone = {
 	href: "tel:+5511999999999",
@@ -17,7 +17,7 @@ export const email = {
 };
 
 export const address = {
-	street: "Rua das Carnes, 1000",
+	street: "Rua dos Sabores, 1000",
 	city: "São Paulo",
 	zip: "01000-000",
 	state: "SP",

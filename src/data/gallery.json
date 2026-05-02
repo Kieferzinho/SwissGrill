@@ -3,54 +3,54 @@
 		"id": 1,
 		"title": "local-um",
 		"image": "/src/assets/images/localUm.jpeg",
-		"alt": "Interior photo local um"
+		"alt": "Área coberta com mesas da hamburgueria"
 	},
 	{
 		"id": 2,
 		"title": "local-dois",
 		"image": "/src/assets/images/localDois.jpeg",
-		"alt": "Interior photo local dois"
+		"alt": "Salão principal com mesas alinhadas"
 	},
 	{
 		"id": 3,
 		"title": "local-tres",
 		"image": "/src/assets/images/localTres.jpeg",
-		"alt": "Interior photo local tres"
+		"alt": "Corredor lateral do ambiente interno"
 	},
 	{
 		"id": 4,
 		"title": "local-quatro",
 		"image": "/src/assets/images/localQuatro.jpeg",
-		"alt": "Interior photo local quatro"
+		"alt": "Vista ampla do salão da casa"
 	},
 	{
 		"id": 5,
 		"title": "local-mesas",
 		"image": "/src/assets/images/localMesas.jpeg",
-		"alt": "Dining tables"
+		"alt": "Mesas prontas para receber clientes"
 	},
 	{
 		"id": 6,
 		"title": "recepcao",
 		"image": "/src/assets/images/recepcao.jpeg",
-		"alt": "Reception area"
+		"alt": "Recepção e entrada da hamburgueria"
 	},
 	{
 		"id": 7,
 		"title": "recepcao-dois",
 		"image": "/src/assets/images/recepcaoDois.jpeg",
-		"alt": "Reception area two"
+		"alt": "Área de atendimento e preparo dos pedidos"
 	},
 	{
 		"id": 8,
-		"title": "churrasco",
-		"image": "/src/assets/images/churrasco.jpeg",
-		"alt": "Churrasco dish"
+		"title": "burger-artesanal",
+		"image": "/src/assets/images/burger.JPG",
+		"alt": "Hambúrguer artesanal servido na mesa"
 	},
 	{
 		"id": 9,
-		"title": "feijoada",
-		"image": "/src/assets/images/feijoada.jpeg",
-		"alt": "Feijoada dish"
+		"title": "prato-da-casa",
+		"image": "/src/assets/images/prato.jpeg",
+		"alt": "Prato da casa com acompanhamentos"
 	}
 ]

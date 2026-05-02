@@ -25,8 +25,8 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Reservar",
-        url: "/book",
+        name: "Pedir",
+        url: "/order",
         highlighted: true,
     },
 ];

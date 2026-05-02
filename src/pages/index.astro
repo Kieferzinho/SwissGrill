@@ -2,7 +2,7 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
-import { Picture, Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
@@ -12,56 +12,62 @@ import WideImage from "~/components/WideImage.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
 
 // Images
-import logo from "~/assets/images/logoSwissGrill.jpeg";
-import localUm from "~/assets/images/localUm.jpeg";
-import localDois from "~/assets/images/localDois.jpeg";
-import localTres from "~/assets/images/localTres.jpeg";
-import localQuatro from "~/assets/images/localQuatro.jpeg";
-import localMesas from "~/assets/images/localMesas.jpeg";
-import recepcao from "~/assets/images/recepcao.jpeg";
-import recepcaoDois from "~/assets/images/recepcaoDois.jpeg";
 import prato from "~/assets/images/prato.jpeg";
-import churrasco from "~/assets/images/churrasco.jpeg";
-import feijoada from "~/assets/images/feijoada.jpeg";
-import self from "~/assets/images/self.jpeg";
-import selfDois from "~/assets/images/selfDois.jpeg";
-import selfService from "~/assets/images/selfService.jpeg";
-import selfServiceDois from "~/assets/images/selfServiceDois.jpeg";
-import selfServiceTres from "~/assets/images/selfServiceTres.jpeg";
-import selfServiceQuatro from "~/assets/images/selfServiceQuatro.jpeg";
+import burgerFeature from "~/assets/images/burger.JPG";
+import burgerShowcase from "~/assets/images/menuSwissBurgerDois.JPG";
+import prepOne from "~/assets/images/preparacao.JPG";
+import fries from "~/assets/images/fritas.JPG";
+import onionRings from "~/assets/images/onionRings.JPG";
 import reviewAuthors from "~/assets/images/review-authors.png";
-import marmitaUm from "~/assets/images/marmitaUm.jpeg";
-import marmitaDois from "~/assets/images/marmitaDois.jpeg";
-import marmitaTres from "~/assets/images/marmitaTres.jpeg";
-import marmitaQuatro from "~/assets/images/marmitaQuatro.jpeg";
-import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 ---
 
-<Layout title="Início" pageTitle="Início" description="Bem-vindo ao nosso restaurante!">
+<Layout title="Início" pageTitle="Início" description="Bem-vindo à Swiss Grill, sua hamburgueria em São Paulo.">
 	<Section class:list={"bg-gray-dark"}>
+		<div class="mb-16 rounded-[2rem] border border-white/10 bg-black/35 px-6 py-10 shadow-2xl backdrop-blur-sm lg:px-12 lg:py-14">
+			<div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+				<Badge color="yellow-gold" title="Hamburgueria artesanal" />
+				<div class="space-y-5">
+					<p class="text-pretty text-gray-light lg:text-lg">
+						Tudo começa com uma boa chapa, ingredientes frescos e aquele clima certo para comer sem pressa.
+					</p>
+				</div>
+				<div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-yellow-bright/90">
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Entrega rápida</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Pedidos online</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Ambiente acolhedor</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="mx-auto mb-16 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		</div>
+
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="yellow-gold" title="Restaurante Brasileiro" />
-				<h1 class="font-black">Refeições completas, sabor marcante e cuidado em cada preparo.</h1>
+				<Badge color="yellow-gold" title="Hamburgueria artesanal" />
+				<h1 class="font-black">Burgers suculentos, ingredientes frescos e sabor marcante em cada mordida.</h1>
 
 				<p>
-					Na SwissGrill Marmitaria, acreditamos que boa comida começa com bons ingredientes e termina com satisfação à mesa. Nossos pratos são preparados com atenção, equilíbrio e muito sabor, trazendo uma experiência prática e acolhedora para quem valoriza qualidade no dia a dia.
+					Na Swiss Grill, acreditamos que um grande hambúrguer começa com pão macio, blend bem preparado e ingredientes de qualidade. Do almoço ao jantar, criamos combinações que unem sabor, conforto e aquele clima perfeito para reunir a galera.
 				</p>
 
 				<span class="text-yellow-gold font-medium">✔ Também fazemos entrega</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button color="yellow-gold" url="/book">Reservar agora</Button>
+					<Button color="yellow-gold" url="/order">Pedir agora</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={logo}
+					src={burgerFeature}
 					height={600}
 					formats={["avif", "webp"]}
-					alt="Imagem de destaque"
+					alt="Hambúrguer artesanal em destaque"
 					loading={"eager"}
 					fetchpriority={"high"}
 				/>
@@ -69,13 +75,19 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 		</Hero>
 	</Section>
 
-	<WideImage image={feijoada} alt="Imagem decorativa" class:list={"aspect-video lg:aspect-[16/6]"} />
+	<WideImage image={burgerShowcase} alt="Burger premium servido no prato" class:list={"aspect-video lg:aspect-[16/6] rounded-none"} />
+
+	<div class="mx-auto my-10 flex max-w-5xl items-center gap-4 px-4 lg:my-14" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/30 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/30 to-transparent"></span>
+	</div>
 
 	<Section class:list={"bg-gray-dark"}>
 		<Heading>
-			<h2 slot="heading-title" class="font-black text-yellow-gold h2">Self Service</h2>
+			<h2 slot="heading-title" class="font-black text-yellow-gold h2">Nossos destaques</h2>
 			<p slot="heading-content" class="text-gray-light">
-				Explore nossa seleção de pratos brasileiros autênticos, de pratos tradicionais a opções contemporâneas.
+				Os favoritos da casa, organizados por categoria para facilitar a escolha.
 			</p>
 		</Heading>
 
@@ -84,13 +96,13 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
 						class:list={"not-prose w-full h-auto rounded-lg"}
-						src={self}
+						src={prepOne}
 						formats={["avif", "webp"]}
-						alt="Prato servido"
+						alt="Preparação de hambúrguer na chapa"
 					/>
-					<h3 class="h4 mt-4 font-black text-yellow-gold">Pratos Quentes</h3>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Burgers da Casa</h3>
 					<p class="text-gray-light">
-						No nosso self service você encontra uma variedade de pratos quentes, como carnes assadas, massas, arroz, feijão e acompanhamentos fresquinhos todos os dias.
+						Da receita clássica ao smash burger, nossos lanches são montados na hora com carnes selecionadas, queijo derretido e molhos especiais.
 					</p>
 				</div>
 			</div>
@@ -99,13 +111,13 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
 						class:list={"not-prose w-full h-auto rounded-lg"}
-						src={selfDois}
+						src={fries}
 						formats={["avif", "webp"]}
-						alt="Espaguete servido"
+						alt="Batatas fritas crocantes"
 					/>
-					<h3 class="h4 mt-4 font-black text-yellow-gold">Saladas Frescas</h3>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Acompanhamentos</h3>
 					<p class="text-gray-light">
-						Monte seu prato com uma seleção de saladas frescas, legumes cozidos e opções leves, ideais para quem busca uma refeição equilibrada e saborosa.
+						Complemente seu pedido com batata crocante, onion rings e porções perfeitas para compartilhar sem abrir mão do sabor.
 					</p>
 				</div>
 			</div>
@@ -114,31 +126,35 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 				<div class="flex flex-col items-center prose text-center bg-gray-dark/50 rounded-lg p-6 border border-gray-dark/50">
 					<Picture
 						class:list={"not-prose w-full h-auto rounded-lg"}
-						src={selfService}
+						src={onionRings}
 						formats={["avif", "webp"]}
-						alt="Prato de peixe"
+						alt="Porcao de onion rings"
 					/>
-					<h3 class="h4 mt-4 font-black text-yellow-gold">Opções de Peixes</h3>
+					<h3 class="h4 mt-4 font-black text-yellow-gold">Combos completos</h3>
 					<p class="text-gray-light">
-						Aproveite também nossas opções de peixes e frutos do mar, preparados com temperos especiais, trazendo variedade ao seu almoço self service.
+						Escolha seu burger favorito com batata e bebida por um preço especial. Ideal para o almoço corrido ou para curtir sem pressa.
 					</p>
 				</div>
 			</div>
 		</Grid>
 
+		<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		</div>
+
 	<Section class:list={"bg-gray-dark"}>
 		   <Hero>
 			   <div slot="hero-content-left" class="prose lg:order-2">
-				   <h1 class="font-black text-yellow-gold">Churrasco</h1>
+				   <h1 class="font-black text-yellow-gold">Hambúrgueres artesanais</h1>
 
 				   <p class="text-gray-light">
-					   O churrasco é uma tradição brasileira que reúne amigos e família ao redor do fogo e de sabores marcantes. 
-					   Cortes selecionados, temperos especiais e o aroma irresistível da brasa fazem parte dessa experiência única.
+					   Nossos hambúrgueres são preparados com blends selecionados, pão sempre fresco e combinações de ingredientes que equilibram textura e sabor em cada mordida.
 				   </p>
 
 				   <p class="text-gray-light">
-					   Seja em uma grande confraternização ou em um almoço de domingo, o churrasco aproxima as pessoas 
-					   e celebra a alegria de compartilhar bons momentos e boa comida.
+					   Seja para um almoço rápido, um jantar com amigos ou aquele lanche caprichado no fim do dia, a experiência aqui é feita para quem ama burger de verdade.
 				   </p>
 
 				   <div class="mt-8">
@@ -162,14 +178,20 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 			   <div slot="hero-content-right">
 				   <Picture
 					   class:list={"mx-auto"}
-					   src={churrasco}
+					   src={burgerFeature}
 					   height={600}
 					   formats={["avif", "webp"]}
-					   alt="Imagem de churrasco"
+					   alt="Hambúrguer artesanal"
 				   />
 			   </div>
 		   </Hero>
 	</Section>
+
+	<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
 
 	<Section class:list={"bg-gray-dark"}>
 		<Hero>
@@ -177,27 +199,33 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 				<Badge color="yellow" title="delicious" />
 				<h2 class="font-black h2 !my-4 text-yellow-gold">Prato da semana</h2>
 
-				<span class="text-yellow-bright text-2xl font-bold italic">Feijoada!</span>
+				<span class="text-yellow-bright text-2xl font-bold italic">Smash Bacon Duplo!</span>
 
 				<p class="text-gray-light">
-					Nosso prato da semana é uma delícia que muda toda semana. Desta vez, trazemos a feijoada, um clássico da culinária brasileira preparada com carne de porco macia, feijão preto cremoso e acompanhamentos tradicionais. Não perca essa oferta por tempo limitado!
+					Toda semana destacamos uma criação especial da casa. Desta vez, o Smash Bacon Duplo chega com duas carnes prensadas, cheddar cremoso, bacon crocante e molho da casa no pão brioche. Aproveite por tempo limitado.
 				</p>
 
 				<div class="mt-8">
-					<Button color="yellow-bright" url="/book">Reservar agora</Button>
+					<Button color="yellow-gold" url="/order">Pedir agora</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={feijoada}
+						src={burgerShowcase}
 					height={600}
 					formats={["avif", "webp"]}
-					alt="A description of my image."
+					alt="Burger premium com acompanhamentos"
 				/>
 			</div>
 		</Hero>
 	</Section>
+
+	<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
 
 	<!-- Reviews -->
 	<Section class:list={"bg-gray-dark relative"}>
@@ -211,7 +239,7 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 					<div slot="heading-content">
 						<p class="text-center text-gray-light">
 							Não acredite só na nossa palavra. Veja o que nossos clientes dizem sobre a experiência
-							gastronômica em nosso restaurante.
+							com nossos hambúrgueres, atendimento e ambiente.
 						</p>
 
 						<ReviewSlider />
@@ -248,11 +276,17 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 		</svg>
 	</Section>
 
+	<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
+
 	<!-- Desserts -->
 	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none order-2">
-				<Badge color="yellow-gold" title="dolce" />
+				<Badge color="yellow-gold" title="doces" />
 				<h2 slot="heading-title" class="font-black text-yellow-gold h2 !my-4">Sobremesas</h2>
 				<div slot="heading-content">
 					<p class="text-gray-light">
@@ -261,9 +295,8 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 					</p>
 
 					<p class="text-gray-light">
-						Experimente o sabor da Itália com nossos pratos autênticos feitos com os melhores ingredientes.
-						Aproveite nossa variedade de pizzas, massas e sobremesas, todas preparadas com amor e tradição.
-						No salão ou para viagem, prometemos uma experiência memorável.
+						Perfeitas para acompanhar seu burger ou para matar a vontade de doce, nossas sobremesas são preparadas para fechar a refeição com chave de ouro.
+						No salão, para retirada ou delivery, prometemos uma experiência memorável.
 					</p>
 
 					<div class="mt-8">
@@ -284,16 +317,22 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 		</Hero>
 	</Section>
 
+	<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
+
 	<!-- Contact -->
 	<Section class:list={"bg-gray-dark"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none">
-				<Badge color="yellow" title="benvenuto" />
+				<Badge color="yellow" title="venha provar" />
 				<h2 slot="heading-title" class="font-black text-yellow-bright h2 !my-4">Venha nos visitar</h2>
 				<div slot="heading-content">
 					<p class="text-gray-light">
 						Estamos no coração da cidade, a poucos passos da praça principal. 
-						Nosso restaurante é o lugar perfeito para apreciar uma refeição deliciosa com amigos e família.
+						Nossa hamburgueria é o lugar perfeito para curtir burgers incríveis com amigos e família.
 					</p>
 
 					<span class="text-yellow-gold font-medium">
@@ -301,7 +340,7 @@ import marmitaCinco from "~/assets/images/marmitaCinco.jpeg";
 					</span>
 
 					<div class="mt-8">
-						<Button color="yellow-bright" url="/book">Reservar uma mesa</Button>
+						<Button color="yellow-gold" url="/order">Pedir agora</Button>
 					</div>
 				</div>
 			</div>

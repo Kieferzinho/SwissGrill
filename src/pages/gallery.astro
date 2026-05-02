@@ -1,7 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
-import Heading from "~/components/Heading.astro";
 import { Picture } from "astro:assets";
 import { getCollection } from "astro:content";
 
@@ -10,29 +9,49 @@ const gallery = await getCollection("gallery");
 
 <Layout>
 	<Section class:list={"[&>.container]:pb-0 bg-gray-dark"}>
-		<Heading>
-			<h1 slot="heading-title" class="font-black text-yellow-gold h2">Galeria</h1>
-			<p slot="heading-content" class="text-gray-light">
-				Conheça nosso restaurante e nossos pratos na galeria. Prometemos uma experiência culinária inesquecível.
-			</p>
-		</Heading>
-	</Section>
-	<div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
-		{
-			gallery.map((item, index) => (
-				<div class="masonry-grid-item overflow-hidden rounded-lg border-2 border-yellow-gold/20 hover:border-yellow-gold transition">
-					<a href={item.data.image.src} class="glightbox">
-						<Picture
-							src={item.data.image}
-							alt={item.data.alt}
-							class="h-full w-full object-cover object-center hover:scale-105 transition duration-300"
-							loading={index < 3 ? "eager" : "lazy"}
-                            fetchpriority={index < 3 ? "high" : "auto"}
-						/>
-					</a>
+		<div class="mb-16 rounded-[2rem] border border-white/10 bg-black/35 px-6 py-10 shadow-2xl backdrop-blur-sm lg:px-12 lg:py-14">
+			<div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+				<span class="inline-flex items-center rounded-full border border-yellow-gold/20 bg-yellow-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-yellow-bright">
+					Visual
+				</span>
+				<div class="space-y-5">
+					<p class="text-pretty text-gray-light lg:text-lg">
+						Uma amostra do ambiente, dos pratos e dos detalhes que ajudam a contar a história da casa.
+					</p>
 				</div>
-			))
-		}
+				<div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-yellow-bright/90">
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Ambiente</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Burgers</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Detalhes da casa</span>
+				</div>
+			</div>
+		</div>
+	</Section>
+	<div class="mx-auto mb-16 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
+
+	<div class="rounded-[2rem] border border-white/10 bg-black/25 p-4 shadow-2xl backdrop-blur-sm lg:p-6">
+		<div class="masonry-grid grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6 [grid-auto-rows:minmax(0,1fr)]">
+			{
+				gallery.map((item, index) => (
+					<div class="masonry-grid-item flex overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-yellow-gold/40 hover:shadow-xl">
+						<a href={item.data.image.src} class="glightbox block h-full w-full">
+							<Picture
+								src={item.data.image}
+								alt={item.data.alt}
+								class="block h-full w-full object-cover object-center transition duration-300 hover:scale-105"
+								loading={index < 3 ? "eager" : "lazy"}
+								fetchpriority={index < 3 ? "high" : "auto"}
+								style="aspect-ratio: 1 / 1"
+							/>
+						</a>
+					</div>
+				))
+			}
+		</div>
 	</div>
 </Layout>
 

@@ -7,25 +7,47 @@ import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Article from "~/components/Article.astro";
 import { Picture } from "astro:assets";
-import heroImage from "~/assets/images/recepcao.jpeg";
+import heroImage from "~/assets/images/localUm.jpeg";
 
 ---
 
 <Layout>
 	<Section class:list={"bg-gray-dark"}>
+		<div class="mb-16 rounded-[2rem] border border-white/10 bg-black/35 px-6 py-10 shadow-2xl backdrop-blur-sm lg:px-12 lg:py-14">
+			<div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+				<Badge color="yellow-gold" title="Sobre Nós" />
+				<div class="space-y-5">
+					<p class="text-pretty text-gray-light lg:text-lg">
+						Um resumo da nossa cozinha, do cuidado no preparo e do que faz a experiência Swiss Grill funcionar.
+					</p>
+				</div>
+				<div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-yellow-bright/90">
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Receitas autorais</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Ambiente acolhedor</span>
+					<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Pedidos e delivery</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="mx-auto mb-16 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+			<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		</div>
+
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="yellow-gold" title="Restaurante Brasileiro" />
-				<h1 class="font-black text-yellow-gold">Refeições completas, sabor marcante e cuidado em cada preparo.</h1>
+				<Badge color="yellow-gold" title="Hamburgueria artesanal" />
+				<h1 class="font-black text-yellow-gold">Sabor de verdade, ambiente acolhedor e burgers feitos na hora.</h1>
 
 				<p class="text-gray-light">
-					Na SwissGrill Marmitaria, acreditamos que boa comida começa com bons ingredientes e termina com satisfação à mesa. Nossos pratos são preparados com atenção, equilíbrio e muito sabor, trazendo uma experiência prática e acolhedora para quem valoriza qualidade no dia a dia.
+					Na Swiss Grill, cada detalhe importa: do pão ao molho da casa. Trabalhamos com ingredientes frescos e preparo cuidadoso para entregar hambúrgueres artesanais que surpreendem no sabor e na qualidade.
 				</p>
 
 				<span class="text-yellow-gold font-medium">✔ Também fazemos entrega</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button color="yellow-gold" url="/book">Reservar agora</Button>
+					<Button color="yellow-gold" url="/order">Pedir agora</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
@@ -36,7 +58,7 @@ import heroImage from "~/assets/images/recepcao.jpeg";
 					   width={800}
 					   height={600}
 					   formats={["avif", "webp"]}
-					   alt="Interior de restaurante italiano com clientes aproveitando a comida."
+					   alt="Interior da hamburgueria com clientes aproveitando a refeição."
 					   loading={"eager"}
 					   fetchpriority={"high"}
 				   />
@@ -44,29 +66,35 @@ import heroImage from "~/assets/images/recepcao.jpeg";
 		</Hero>
 	</Section>
 
+	<div class="mx-auto my-10 flex max-w-4xl items-center gap-4 px-2" aria-hidden="true">
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+		<span class="h-2.5 w-2.5 rounded-full bg-yellow-gold shadow-[0_0_18px_rgba(200,146,47,0.7)]"></span>
+		<span class="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-gold/40 to-transparent"></span>
+	</div>
+
 	<Section class:list={"bg-gray-dark"}>
 		<Article>
-			<h2 class="text-yellow-gold">Bem-vindo à SwissGrill Marmitaria</h2>
+			<h2 class="text-yellow-gold">Bem-vindo à Swiss Grill</h2>
 			<p class="text-gray-light">
-				Estamos no coração da cidade, a poucos passos da praça principal. Nosso restaurante é o lugar perfeito para apreciar uma refeição deliciosa com amigos e família, em um ambiente acolhedor e descontraído.
+				Estamos no coração da cidade, a poucos passos da praça principal. Nossa casa é o ponto de encontro ideal para quem busca hambúrgueres caprichados em um ambiente descontraído e acolhedor.
 			</p>
 
 			<h3 class="text-yellow-gold">Nossa Essência</h3>
 			<p class="text-gray-light">
-				Aqui, tradição e sabor caminham juntos. Preparamos pratos brasileiros autênticos, com ingredientes frescos e selecionados, para garantir qualidade e satisfação em cada refeição.
+				Aqui, criatividade e sabor caminham juntos. Montamos receitas autorais e clássicos irresistíveis com ingredientes selecionados, garantindo uma experiência consistente em cada pedido.
 			</p>
 
 			<h3 class="text-yellow-gold">O que oferecemos</h3>
 			<ul class="text-gray-light">
-				<li><strong>Self Service:</strong> Variedade de pratos quentes, saladas frescas e opções de peixes.</li>
-				<li><strong>Churrasco:</strong> Cortes selecionados e temperos especiais, celebrando a tradição brasileira.</li>
-				<li><strong>Sobremesas:</strong> Doces clássicos e opções irresistíveis para finalizar sua refeição.</li>
-				<li><strong>Entrega e retirada:</strong> Praticidade para você aproveitar onde quiser.</li>
+				<li><strong>Burgers artesanais:</strong> Opções clássicas, smashs e receitas especiais da casa.</li>
+				<li><strong>Acompanhamentos:</strong> Batatas, onion rings e porções perfeitas para dividir.</li>
+				<li><strong>Sobremesas:</strong> Doces que fecham a refeição com o equilíbrio ideal.</li>
+				<li><strong>Entrega e retirada:</strong> Praticidade para aproveitar onde você quiser.</li>
 			</ul>
 
 			<h3 class="text-yellow-gold">Venha nos visitar</h3>
 			<p class="text-gray-light">
-				Seja para celebrar uma ocasião especial ou simplesmente saborear uma boa comida, a SwissGrill Marmitaria é o destino ideal. Venha pela comida, fique pela experiência!
+				Seja para celebrar uma ocasião especial ou simplesmente matar a vontade de um burger incrível, a Swiss Grill é o destino ideal. Venha pelo sabor, fique pela experiência.
 			</p>
 		</Article>
 	</Section>

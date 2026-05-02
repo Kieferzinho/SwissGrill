@@ -5,12 +5,12 @@
 	--font-inter: "Inter", "sans-serif";
 
 	/* Swiss Grill Paleta de Cores */
-	--color-yellow-bright: #FFD700;
-	--color-yellow-gold: #FFCC00;
-	--color-black: #000000;
-	--color-white: #FFFFFF;
-	--color-gray-light: #F5F5F5;
-	--color-gray-dark: #333333;
+	--color-yellow-bright: #F4C95D;
+	--color-yellow-gold: #C8922F;
+	--color-black: #0B0B0C;
+	--color-white: #F8F5EF;
+	--color-gray-light: #D9D2C5;
+	--color-gray-dark: #1A1A1F;
 }
 
 @utility container {
@@ -127,6 +127,9 @@ body {
 
 body {
 	@apply h-full scroll-smooth font-inter text-gray-light bg-gray-dark;
+	background:
+		radial-gradient(circle at top, rgb(200 146 47 / 0.12), transparent 30%),
+		linear-gradient(180deg, #0b0b0c 0%, #111116 48%, #1a1a1f 100%);
 }
 
 h1,
@@ -177,23 +180,23 @@ p {
 }
 
 .button-yellow {
-	@apply bg-yellow-bright hover:bg-yellow-bright/90 text-black focus-visible:outline-yellow-bright;
+	@apply bg-yellow-gold hover:bg-yellow-bright text-black focus-visible:outline-yellow-gold shadow-[0_12px_30px_rgba(200,146,47,0.24)];
 }
 
 .button-yellow-gold {
-	@apply bg-yellow-gold hover:bg-yellow-gold/90 text-black focus-visible:outline-yellow-gold;
+	@apply bg-yellow-gold hover:bg-yellow-bright text-black focus-visible:outline-yellow-gold shadow-[0_12px_30px_rgba(200,146,47,0.24)];
 }
 
 .button-black {
-	@apply bg-black hover:bg-black/80 text-white focus-visible:outline-black;
+	@apply bg-yellow-gold hover:bg-yellow-bright text-black focus-visible:outline-yellow-gold shadow-[0_12px_30px_rgba(200,146,47,0.24)];
 }
 
 .button-gray-dark {
-	@apply bg-gray-dark hover:bg-gray-dark/80 text-white focus-visible:outline-gray-dark;
+	@apply bg-yellow-gold hover:bg-yellow-bright text-black focus-visible:outline-yellow-gold shadow-[0_12px_30px_rgba(200,146,47,0.24)];
 }
 
 .menu-item-highlighted.menu-item-highlighted {
-	@apply text-black bg-yellow-gold px-4 rounded-full py-1.5 hover:bg-yellow-bright hover:text-black transition;
+	@apply text-black bg-yellow-gold px-4 rounded-full py-1.5 hover:bg-yellow-bright hover:text-black transition shadow-sm;
 }
 
 .menu-item-active.menu-item-highlighted {
@@ -239,7 +242,7 @@ p {
 
 input,
 textarea {
-	@apply border border-gray-dark/30 rounded-lg px-4 py-3 w-full bg-gray-dark/50 text-gray-light focus:outline-none focus:ring-2 focus:ring-yellow-bright;
+	@apply border border-white/10 rounded-lg px-4 py-3 w-full bg-black/30 text-gray-light focus:outline-none focus:ring-2 focus:ring-yellow-gold;
 }
 
 input::placeholder,

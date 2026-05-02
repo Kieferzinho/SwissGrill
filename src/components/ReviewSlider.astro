@@ -3,16 +3,18 @@ import { getCollection } from "astro:content";
 const allReviews = await getCollection("reviews");
 ---
 
-<div class="swiper w-full mt-8 bg-white rounded-lg">
-	<div class="swiper-wrapper h-auto w-auto pt-8 pb-12">
+<div class="swiper w-full mt-8 overflow-hidden rounded-3xl border border-white/10 bg-black/35 shadow-2xl backdrop-blur-sm">
+	<div class="swiper-wrapper h-auto w-auto px-2 py-10 lg:px-4 lg:py-12">
 		{
 			allReviews.map((review) => (
 				<div class="swiper-slide cursor-pointer select-none">
-					<div class="px-4 lg:px-8">
+					<div class="mx-auto flex h-full max-w-3xl flex-col justify-center px-4 lg:px-10">
 						<blockquote class="border-none">
-							<p class="text-center font-medium text-2xl text-balance">{review.data.review}</p>
-							<footer class="text-center mt-4">
-								— <cite>{review.data.author}</cite>
+							<p class="text-center font-medium text-xl lg:text-2xl leading-relaxed text-gray-light text-balance">
+								{review.data.review}
+							</p>
+							<footer class="mt-6 text-center text-sm lg:text-base text-yellow-gold">
+								— <cite class="not-italic font-semibold text-white">{review.data.author}</cite>
 							</footer>
 						</blockquote>
 					</div>
@@ -20,7 +22,7 @@ const allReviews = await getCollection("reviews");
 			))
 		}
 	</div>
-	<div class="swiper-pagination"></div>
+	<div class="swiper-pagination !bottom-4"></div>
 </div>
 
 <script>
